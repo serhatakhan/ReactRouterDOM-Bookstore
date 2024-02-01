@@ -1,55 +1,31 @@
-### Routes
+# Kitap Kurdu
 
-- **Routes:**
-Tarayıcadaki url'i izler ve url değiştiğinde, yol olarak tanımladığımız route'lardan birinin path değeri ile eşleşirse ekrana o route'un elementini basar.
+Bu proje, **React Router DOM** kullanılarak geliştirilmiş bir online kitap mağazasını içermektedir. Proje, React Router DOM'un temel özelliklerini anlamak ve kullanmak için geliştirilmiştir. Aşağıda projede kullanılan bazı önemli özelliklere ve bileşenlere dair bilgiler yer almaktadır:
 
-- **path:** kullanıcının göüntülemek istediği sayfadır.
+## Özellikler
 
+### 1. React Router DOM Kullanımı
+   - `BrowserRouter` component'i, tarayıcıdaki URL'ye göre sayfalama sağlar.
+   - `Routes` ve `Route` component'leri, farklı sayfaların ve yolların tanımlanmasını sağlar.
 
-### link
+### 2. Dinamik Sayfalama
+   - `/:id` şeklindeki dinamik yol tanımlarıyla, ürün detayları gibi dinamik içeriklerin yönetimi mümkündür.
+   - Örneğin, `/ürün/123` URL'iyle erişilen sayfa, 123 numaralı ürünün detaylarını gösterir.
 
-- Proje içerisinde yönlendirme isşlemlerinde a etiketi yerine kullanılır.
-- href yerine *to* değeri, yönlendirilecek sayfayı belirler. <Header /> bileşeninde bir örneğini kullandık. 
+### 3. İç İçe Yollar (Nested Routes)
+   - `CategoryPage` içindeki farklı kategorilere ait iç içe geçmiş yollar ile karmaşık sayfa yapıları oluşturulabilir.
+   - Örneğin, `/kategori/hikaye`, `/kategori/roman`, gibi iç içe geçmiş kategorilere ait sayfalar yönetilebilir.
 
-### Navlink
+### 4. Ortak Bileşenler
+   - `Header` ve `Footer` component'leri, bütün sayfalar arasında ortak olarak kullanılır. Bu sayede proje genelinde tutarlı bir tasarım sağlanır.
 
-- Link etiketi ile aynı görevi yapar.
+### 5. 404 Sayfa
+   - Tanımlanmayan bir yol girildiğinde kullanıcıyı karşılayan özel bir 404 sayfası (`NotFound`) bulunmaktadır.
 
-- Eğer kullanıcı, o linkin to değeri ile yönlendirme yapılan sayfadaysa, link *active* classı alır.
-
-## Dynamic Route - dinamik sayfalama
-
-- Sayfa içeriğini url'den alınan parametrelere göre değiştiği sayfalara verdiğimiz isim.
-
-- Örn: Youtube sayfası / Netflix sayfası / Amazon sayfası
-
-
-## useLocation
-
-- router-dom'dan gelen bir hook
-- kullanıcının bulunduğu sayfa ile alakalı bilgileri alır. bunlar:
-  state / path / hash / param
-- not: buradaki `state`'farklı bir şey, farklı bir sayfadan veri aktarırken karşılaşılan hatalarda state:404 vs yazar. onu ifade ediyor.
-
-
-## useNavigate
-
-- Link'in fonksiyon karşılığıdır.
-
-- Kullanılabilmesi için bileşende bir kere çağırılması gerekiyor
-
-- `const navigate = useNavigate()`
-
-
-## Search Params (Arama Parametresi)
-
-- Normalde state'de tutacağımız değerleri arama parametresinde tutmak isteyebiliriz.
-
-- State'de tutulan veriler sayfa yenilendiğinde kaybolur AMA arama parametrelerinde böyle bir durum söz konusu değildir.
-
-- Bundan dolayı sayfa yenilenince kaybetmek istemeyeceğimiz, örneğin filtreleme değerlerini arama parametresi olarak tutarız.
-
-
-## Nested Router (İç İçe Yollar)
-
+## Kullanılan Teknolojiler ve Harici Kütüphaneler
+* React.js
+* React-Router-DOM
+* JSON-Server
+* Axios
+* Bootstrap
 
